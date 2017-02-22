@@ -67,7 +67,7 @@ class Component
                 $children($this);
             }
 
-            // For each child, we'd like to pass the
+            // For each child, we would like to pass the
             // properties given to that child object.
             if (is_array($children)) {
                 foreach ($children as $child => $props) {
@@ -86,10 +86,9 @@ class Component
     {
         if (! app('atomic.registrar')->has($method)) {
 
-            // When we're calling methods not set on this instance of it's children
-            // we'd like to receive a proper error telling us that the
-            // method we'd like to call is non-existing instead of
-            // a warning that the return type of not correct.
+            // When we're calling methods not set on this instance of it's children so we'd
+            // like to receive a proper error telling us that the method we're calling is
+            // non-existing instead of a warning that the return type of not correct.
             throw new RuntimeException(sprintf('Call to undefined method %s::%s()', __CLASS__, $method));
         }
 
@@ -214,7 +213,7 @@ class Component
         $instance = new $namespace($arguments);
 
         // Pass the current instance as a parent to the new instance
-        // so that we later can reference the parent if we want.
+        // so that we later can reference the parent when we want.
         $instance->setParent($this);
 
         $this->children[] = $instance;

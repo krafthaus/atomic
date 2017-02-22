@@ -85,7 +85,7 @@ class Entity
     public function __get(string $prop)
     {
         // When the property is not available, we let PHP
-        // handle the error itself because a retrieving
+        // handle the error itself because retrieving
         // a non-existent property should fail and
         // the programmer should handle this.
         return $this->data[$prop];
