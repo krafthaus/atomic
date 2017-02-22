@@ -12,7 +12,7 @@ namespace KraftHaus\Atomic;
  */
 
 use Illuminate\Support\Collection;
-use KraftHaus\Atomic\Exceptions\InvalidWidgetException;
+use KraftHaus\Atomic\Exceptions\UnknownComponentException;
 
 class Registrar
 {
@@ -64,12 +64,12 @@ class Registrar
      *
      * @param  string  $component
      * @return string
-     * @throws InvalidWidgetException
+     * @throws UnknownComponentException
      */
     public function get(string $component): string
     {
         if (! $this->has($component)) {
-            throw new InvalidWidgetException($component);
+            throw new UnknownComponentException($component);
         }
 
         return $this->components->get($component);
