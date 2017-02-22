@@ -60,7 +60,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     }
 
     /**
-     * Register the widgets.
+     * Register the components.
      */
     protected function registerComponents()
     {
