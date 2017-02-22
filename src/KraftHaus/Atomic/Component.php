@@ -52,7 +52,7 @@ class Component
      */
     public function __construct(array $arguments = [])
     {
-        // Set the properties for this widget instance.
+        // Set the properties for this component instance.
         if (isset($arguments['props'])) {
             $this->setProps($arguments['props']);
         }
@@ -61,8 +61,8 @@ class Component
             $children = $arguments['children'];
 
             // It's possible to pass a closure as a child element. When doing this,
-            // you're limited to only one child element per widget but gaining
-            // the ability for more control over your child widget.
+            // you're limited to only one child element per component but gaining
+            // the ability for more control over your child component.
             if ($children instanceof Closure) {
                 $children($this);
             }
@@ -231,9 +231,9 @@ class Component
     {
         $view = $this->view();
 
-        // When the widget's view method outputs a View instance
-        // rather then a string, we automatically push the
-        // current component instance to this current view.
+        // When the components' view method outputs a View instance rather
+        // then a string, we automatically push the current
+        // component instance to this current view.
         if ($view instanceof View) {
             $view->with([
                 'component' => $this,
@@ -267,8 +267,8 @@ class Component
     }
 
     /**
-     * This view method is here to handle rendering of widgets
-     * outside of the standard widget set, e.g. includes...
+     * This view method is here to handle rendering of components
+     * outside of the standard component set, e.g. includes...
      *
      * @return string
      */
