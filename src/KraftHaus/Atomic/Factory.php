@@ -13,7 +13,6 @@ namespace KraftHaus\Atomic;
 
 class Factory
 {
-
     /**
      * @param  string  $entity
      * @param  string|null  $action
