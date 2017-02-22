@@ -18,6 +18,6 @@ class UnknownComponentException extends \Exception
      */
     public function __construct(string $component)
     {
-        parent::__construct('Unable to find component ' . $component);
+        parent::__construct('Unable to find component '.$component);
     }
 }
