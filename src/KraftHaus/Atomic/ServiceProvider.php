@@ -40,7 +40,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->registerRegistrar();
 
-        $this->registerWidgets();
+        $this->registerComponents();
     }
 
     /**
@@ -62,7 +62,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     /**
      * Register the widgets.
      */
-    protected function registerWidgets()
+    protected function registerComponents()
     {
         $this->app['atomic.registrar']->register(config('atomic.components'));
     }
