@@ -18,7 +18,6 @@ use KraftHaus\Atomic\Support\Facades\Atomic;
 
 class Component
 {
-
     /**
      * The array of children belonging to this Component.
      *
@@ -278,7 +277,7 @@ class Component
         $response = '';
 
         foreach ($this->children as $child) {
-            $response.= $child->render();
+            $response .= $child->render();
         }
 
         return $response;

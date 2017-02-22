@@ -13,7 +13,6 @@ namespace KraftHaus\Atomic;
 
 class Entity
 {
-
     /**
      * The current action that gets executed.
      *
@@ -40,7 +39,7 @@ class Entity
      *
      * @var null
      */
-    protected $builder =  null;
+    protected $builder = null;
 
     /**
      * The default view.
@@ -154,7 +153,7 @@ class Entity
         return view($view)->with([
             'entity' => $this,
             'component' => $this->getComponent(),
-            'builder' => $this->getBuilder()
+            'builder' => $this->getBuilder(),
         ])->render();
     }
 

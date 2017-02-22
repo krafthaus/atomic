@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Facade;
 
 class Atomic extends Facade
 {
-
     /**
      * Get the registered name of the entity.
      *

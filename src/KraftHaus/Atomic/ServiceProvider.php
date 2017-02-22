@@ -13,21 +13,20 @@ namespace KraftHaus\Atomic;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-
     /**
      * Boot the service provider.
      */
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../../config/atomic.php' => config_path('atomic.php')
+            __DIR__.'/../../config/atomic.php' => config_path('atomic.php'),
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/../../resources/views' => resource_path('views/vendor/atomic')
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/atomic'),
         ], 'views');
 
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'atomic');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'atomic');
     }
 
     /**
@@ -35,7 +34,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/atomic.php', 'atomic');
+        $this->mergeConfigFrom(__DIR__.'/../../config/atomic.php', 'atomic');
 
         $this->registerFactory();
 

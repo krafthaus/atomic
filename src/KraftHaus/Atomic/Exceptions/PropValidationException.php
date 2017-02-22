@@ -15,7 +15,6 @@ use Illuminate\Contracts\Validation\Validator;
 
 class PropValidationException extends \Exception
 {
-
     /**
      * The validator instance.
      *

@@ -16,7 +16,6 @@ use KraftHaus\Atomic\Exceptions\PropValidationException;
 
 class Builder
 {
-
     /**
      * Holds the current executed Entity instance.
      *

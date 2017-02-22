@@ -16,7 +16,6 @@ use KraftHaus\Atomic\Exceptions\InvalidWidgetException;
 
 class Registrar
 {
-
     /**
      * Holds the collection of registered components.
      *
