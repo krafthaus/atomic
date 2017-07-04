@@ -41,6 +41,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->registerRegistrar();
 
         $this->registerComponents();
+
+        $this->registerHelpers();
     }
 
     /**
@@ -65,5 +67,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     protected function registerComponents()
     {
         $this->app['atomic.registrar']->register(config('atomic.components'));
+    }
+
+    /**
+     * Require the helpers file.
+     */
+    protected function registerHelpers()
+    {
+        require __DIR__.'/Support/helpers.php';
     }
 }
