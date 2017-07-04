@@ -11,7 +11,6 @@ namespace KraftHaus\Atomic;
  * file that was distributed with this source code.
  */
 
-use Illuminate\Support\Facades\Validator;
 use KraftHaus\Atomic\Exceptions\PropValidationException;
 
 class Builder
@@ -61,7 +60,7 @@ class Builder
      */
     protected function validate(array $data, array $props)
     {
-        $validator = Validator::make($data, $props);
+        $validator = validator($data, $props);
 
         if ($validator->fails()) {
             throw new PropValidationException($validator);
